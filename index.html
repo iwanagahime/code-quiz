@@ -10,19 +10,26 @@
 
   <body>
     <header>
+      
+      <!-- flex container -->
+      <div class="header-flex-container">
+        <!-- TODO add link to high scores page -->
+        <div><a href="">View High Scores</a></div>
+        <div>Timer:<span>0</span id="timer-span"></div>
+      </div>
+    </header>
+
+    <div>
       <h1>Coding Quiz Challenge</h1>
       <div>
         Try to answer the following code-related questions within the time
-        limit.
-        <!-- TODO add description -->
-      </div>
-      <!-- flex container -->
-      <div>
-        <!-- TODO add link to high scores page -->
-        <div><a href="">View High Scores</a></div>
-        <div>Timer:<span></span></div>
-      </div>
-    </header>
+        limit. Keep in mind that a wrong answer will penalize your score time by 10 seconds! 
+      </div >
+    </div>
+
+    <div>
+      <button id="start-quiz-button">Start</button>
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
