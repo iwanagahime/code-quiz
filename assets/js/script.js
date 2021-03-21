@@ -3,6 +3,9 @@ const startButtonElement = document.getElementById("start-quiz-button");
 const constructQuizContainer = () => {
   const quizContainerDiv = document.createElement("div");
   quizContainerDiv.setAttribute("class", "quiz-container");
+  answersContainerDiv.setAttribute("class", "answers-container");
+
+  //TODO how to set the buttons for answers within this answer div?
 };
 
 const startQuiz = () => {
