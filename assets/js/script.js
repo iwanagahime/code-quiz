@@ -1,14 +1,19 @@
 const startButtonElement = document.getElementById("start-quiz-button");
+const startQuizDiv = document.getElementById("start-quiz-section");
 
 const constructQuizContainer = () => {
   const quizContainerDiv = document.createElement("div");
   quizContainerDiv.setAttribute("class", "quiz-container");
-  const answersContainerDiv = document.createElement("div");
-  answersContainerDiv.setAttribute("class", "answers-container");
+  const questionAndAnswersContainer = document.createElement("div");
+  questionAndAnswersContainer.setAttribute(
+    "class",
+    "question-and-answers-container"
+  );
 
-  // TODO answersContainerDiv.textContent = "xxx"  How to set the buttons for answers within this answer div?
+  // TODO content of this container needs to be put in place
+  // questionAndAnswersContainer
 
-  quizContainerDiv.appendChild(answersContainerDiv);
+  quizContainerDiv.appendChild(questionAndAnswersContainer);
 
   return quizContainerDiv;
 };
@@ -16,7 +21,9 @@ const constructQuizContainer = () => {
 const startQuiz = () => {
   // replace the start-quiz-section div with the quiz-container div
   // construct the quiz-container div in JS
-  quizDivElement = constructQuizContainer();
+  const quizDivElement = constructQuizContainer();
+
+  // remove start-quiz section
 
   document.body.appendChild(quizDivElement);
   //  => replace;
