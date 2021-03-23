@@ -25,6 +25,8 @@ const startQuiz = () => {
 
   // remove start-quiz section
 
+  document.body.removeChild(startQuizDiv);
+
   document.body.appendChild(quizDivElement);
   //  => replace;
   // document.getElementById(startQuizSection);
