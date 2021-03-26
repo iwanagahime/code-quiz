@@ -4,14 +4,8 @@ const timerSpanElement = document.getElementById("timer-span");
 const bodyElement = document.body;
 
 // const quizCard = "questionAndAnswers";
-// let timerSpanElement = document.querySelector("#current-0");
-// if (timerSpanElement) {
-//   timerSpanElement.textContent = dice;
-// }
 
-let timerValue = 60;
-
-// TODO how to construct questions and answers for quiz card
+let timerValue = 5;
 
 const questions = [
   {
@@ -51,10 +45,6 @@ const questions = [
     correctAnswer: "Position of a box in the array",
   },
 ];
-const constructQuizCard = () => {
-  // const question =
-  // const answers =
-};
 
 const constructQuizContainer = () => {
   const quizContainerDiv = document.createElement("div");
@@ -66,7 +56,7 @@ const constructQuizContainer = () => {
     "question-and-answers-container"
   );
 
-  constructQuizCard();
+  // constructQuizCard();
   // TODO content of this container needs to be put in place
   // questionAndAnswersContainerDiv
 
@@ -76,7 +66,11 @@ const constructQuizContainer = () => {
 };
 
 // Construct form div
-const constructFormContainer = () => {};
+const constructFormContainer = () => {
+  const h1 = document.createElement("h1");
+  h1.textContent = "hello";
+  return h1;
+};
 
 // Add timer
 const startTimer = () => {
@@ -99,11 +93,44 @@ const startTimer = () => {
   const timer = setInterval(timerTick, 1000);
 };
 
-// construct form container
 //  remove quiz container div from bodyElement
 // append form container div to bodyElement
 
+const createChoices = (choices) => {
+  const parentDiv = document.createElement("div");
+  const createChoice = (choice) => {
+    const div = document.createElement("div");
+    const button = document.createElement("button");
+    button.setAttribute("data-answer", choice);
+
+    button.textContent = choice;
+
+    div.appendChild(button);
+
+    parentDiv.appendChild(div);
+  };
+  choices.forEach(createChoice);
+
+  return parentDiv;
+};
+
+const createQuestionSection = (question) => {
+  const divContainer = document.createElement("div");
+  divContainer.setAttribute("id", "question");
+  divContainer.setAttribute("data-answer", question.correctAnswer);
+
+  const h2 = document.createElement("h2");
+  h2.textContent = question.title;
+
+  // create choices
+  const choices = createChoices(question.choices);
+
+  divContainer.append(h2, choices);
+};
+
 const startQuiz = () => {
+  // create question container
+  createQuestionSection(questions[0]);
   // replace the start-quiz-section div with the quiz-container div
 
   const quizDivElement = constructQuizContainer();
