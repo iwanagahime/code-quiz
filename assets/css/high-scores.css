@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   text-align: center;
 }
@@ -19,4 +24,21 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.button {
+  padding: 25px;
+  background-color: navy;
+  color: white;
+  border-radius: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-top: 30px;
 }
