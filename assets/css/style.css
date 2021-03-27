@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .header-flex-container {
   background-color: aqua;
   display: flex;
@@ -36,7 +40,7 @@ h1 {
   padding: 25px;
   background-color: navy;
   color: white;
-  border-radius: 20%;
+  border-radius: 100%;
   font-size: 20px;
   font-weight: bold;
   border: none;
@@ -58,4 +62,33 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.form-container {
+  background-color: navajowhite;
+  height: 400px;
+}
+
+.input-box {
+  border: solid navy 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.button {
+  padding: 25px;
+  background-color: navy;
+  color: white;
+  border-radius: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  margin-top: 30px;
 }
