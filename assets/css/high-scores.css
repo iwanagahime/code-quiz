@@ -2,27 +2,6 @@ h1 {
   text-align: center;
 }
 
-.input-box {
-  border: solid navy 5px;
-}
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.button {
-  padding: 25px;
-  background-color: navy;
-  color: white;
-  border-radius: 10%;
-  font-size: 20px;
-  font-weight: bold;
-  border: none;
-  margin-top: 30px;
-}
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

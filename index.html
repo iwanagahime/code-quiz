@@ -10,48 +10,62 @@
 
   <body>
     <header>
-      
       <!-- flex container -->
       <div class="header-flex-container">
         <!-- TODO add link to high scores page -->
         <div><a href="#">View High Scores</a></div>
-        <div>Timer: <span>0</span id="timer-span"> seconds remaining</div>
+        <div>Timer: <span id="timer-span">0</span> seconds remaining</div>
       </div>
     </header>
-
+    <!-- Start quiz section with start button -->
     <div id="start-quiz-section" class="start-quiz-section">
       <h1>Coding Quiz Challenge</h1>
       <div class="info">
         Try to answer the following code-related questions within the time
-        limit. Keep in mind that a wrong answer will penalize your score time by 10 seconds! 
+        limit. Keep in mind that a wrong answer will penalize your score time by
+        10 seconds!
       </div>
       <div class="start-quiz-button-container">
-        <button id="start-quiz-button" class="start-quiz-button">Start Quiz</button>
-      </div>
-    </div >
-
-<!-- Quiz card div TODO questions and answers -->
-    <div class="quiz-container">Your quiz card appears here
-      <div id ="question" data-answer="semicolon">
-      <h2->What symbol do we use to terminate statements in JavaScript?</h2>
-      </div>
-      <div>
-      <button data-answer ="colon">colon</button>
-      </div>
-      <div>
-      <button data-answer ="coma">coma</button>
-      </div>
-      <div>
-      <button data-answer="underscore">underscore</button>
-      </div>
-      <div>
-      <button data-answer="semicolon">semicolon</button>
+        <button id="start-quiz-button" class="start-quiz-button">
+          Start Quiz
+        </button>
       </div>
     </div>
 
-   
+    <!-- Quiz question card  -->
+    <!-- <div class="quiz-container">
+      Your quiz card appears here
+      <div id="question" data-answer="semicolon">
+        <h2>What symbol do we use to terminate statements in JavaScript?</h2>
+      </div>
+      <div>
+        <button data-answer="colon">colon</button>
+      </div>
+      <div>
+        <button data-answer="coma">coma</button>
+      </div>
+      <div>
+        <button data-answer="underscore">underscore</button>
+      </div>
+      <div>
+        <button data-answer="semicolon">semicolon</button>
+      </div>
+    </div> -->
+<div> 
 
+
+<div>
+    <form id="high-scores" >
+      <label for="high-scores-input"><h1>Your scores go here</h1></label>
+      <textarea id = "high-scores-input" class="input-box" name ="high-scores-input" rows ="1" cols="50"></textarea></form>
+      <div class="button-container">
+        <button id="go-back-button" class="button">Go Back</button>
+        <button id="clear-button" class="button">Clear</button>
+        </div>
+</div>             
+     
     
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>
