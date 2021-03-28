@@ -110,7 +110,7 @@ const createChoices = (choices) => {
     parentDiv.appendChild(div);
   };
   choices.forEach(createChoice);
-
+  console.log(parentDiv);
   return parentDiv;
 };
 
@@ -124,8 +124,9 @@ const createQuestionSection = (question) => {
 
   // create choices
   const choices = createChoices(question.choices);
-
   divContainer.append(h2, choices);
+  console.log(divContainer);
+  return divContainer;
 };
 
 const startQuiz = () => {
@@ -142,10 +143,11 @@ const startQuiz = () => {
   // insert the quiz-container div
 
   bodyElement.appendChild(quizDivElement);
+  // TODO append question to quizDivElement
+  // quizContainerDiv.appendChild(question);
 
   // start timer here
   startTimer();
 };
-console.log("Start Quiz");
 
 startButtonElement.addEventListener("click", startQuiz);
