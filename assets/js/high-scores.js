@@ -1,8 +1,13 @@
-const goBack = document.getElementById("go-back");
-const clear = document.getElementById("clear");
+const goBackButton = document.getElementById("go-back");
+const clearButton = document.getElementById("clear");
 
 const goBack = () => {
+  location.href = "/index.html";
+};
+
+const clear = () => {
   localStorage.clear();
+  onLoad();
 };
 
 const getFromLocalStorage = () => {
@@ -14,15 +19,24 @@ const getFromLocalStorage = () => {
   }
 };
 
-// TODO
-const renderHighScoresTable = (highScores) => {};
+// TODO loop through array and pull out the score and append that item to table
+const renderHighScoresTable = (highScores) => {
+  if (highScores.length === 0) {
+    console.log("empty");
+  } else {
+    console.log("create table");
+  }
+  // create div
+  // create table
+  // append div to page
+};
 
 const onLoad = () => {
   const highScores = getFromLocalStorage();
   renderHighScoresTable(highScores);
 };
 
-goBack.addEventListener("click", goBack);
-clear.addEventListener("click", clear);
+goBackButton.addEventListener("click", goBack);
+clearButton.addEventListener("click", clear);
 
 window.addEventListener("load", onLoad);
