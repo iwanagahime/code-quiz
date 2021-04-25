@@ -3,7 +3,11 @@ const clearButton = document.getElementById("clear");
 
 const highScoresContainerDiv = document.getElementById("high-scores");
 const highScoresListContainer = document.getElementById("high-scores-table");
-const highScores = JSON.parse(localStorage.getItem("highScores"));
+
+const getScoresFromLocalStorage = () => {
+  highScores = JSON.parse(localStorage.getItem("highScores"));
+  return highScores;
+};
 
 // sort scores
 const orderScores = () => {
