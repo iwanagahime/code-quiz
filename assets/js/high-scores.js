@@ -1,6 +1,42 @@
 const goBackButton = document.getElementById("go-back");
 const clearButton = document.getElementById("clear");
 
+const highScoresContainerDiv = document.getElementById("high-scores");
+const highScoresListContainer = document.getElementById("high-scores-table");
+const highScores = JSON.parse(localStorage.getItem("highScores"));
+
+// sort scores
+const orderScores = () => {
+  highScores.sort(function (a, b) {
+    return parseFloat(b.Score) - parseFloat(a.Score);
+  });
+};
+
+// construct high scores table using data from local storage
+const constructHighScoresListItem = (item, index) => {
+  let counter = index + 1;
+  const highScoreItem = document.createElement("li");
+  highScoreItem.setAttribute("class", "list-item");
+  highScoreItem.textContent =
+    counter + ". " + item["initials"] + "-  " + item["score"];
+  highScoresListContainer.appendChild(highScoreItem);
+};
+
+//  order high scores items and render table
+const onLoad = () => {
+  if (highScores) {
+    orderScores();
+    highScores.forEach(constructHighScoresListItem);
+  }
+};
+
+// clear high scores
+const clearHighScores = () => {
+  localStorage.clear();
+  highScores.length = 0;
+  highScoresContainerDiv.removeChild(constructHighScoresListContainer);
+};
+
 const goBack = () => {
   location.href = "/index.html";
 };
